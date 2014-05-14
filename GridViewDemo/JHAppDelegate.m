@@ -7,6 +7,9 @@
 //
 
 #import "JHAppDelegate.h"
+#import "JHGridTableViewController.h"
+#import "JHGViewController.h"
+#import "JHDemoViewController.h"
 
 @implementation JHAppDelegate
 
@@ -16,6 +19,21 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+//    JHGridTableViewController *viewcontroller = [[JHGridTableViewController alloc]initWithStyle:UITableViewStylePlain];
+//    self.window.rootViewController = viewcontroller;
+//    
+//    JHGViewController *viewcontroller = [[JHGViewController alloc]initWithStyle:UITableViewStylePlain];
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:viewcontroller];
+    
+    JHDemoViewController *viewcontroller = [[JHDemoViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:viewcontroller];
+
+//    JHTableViewController *viewcontroller = [[JHTableViewController alloc]initWithStyle:UITableViewStylePlain];
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:viewcontroller];
+    self.window.rootViewController = nav;
+
+    
     return YES;
 }
 
